@@ -13,13 +13,14 @@ services:
       - DB_USER=postgres
       - DB_PASS=password
       - DB_PORT=5432
+      - SECRET_KEY=dev-secret-key
     depends_on:
       - vansterdam-db
   vansterdam-db:
     container_name: vansterdam_db
     image: "postgres:14.5"
     ports:
-      - "5050:5432"
+      - "5432:5432"
     volumes:
       - vansterdam-db-volume:/var/lib/postgresql/data/pgdata
     environment:

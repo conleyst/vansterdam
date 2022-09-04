@@ -3,10 +3,10 @@ FROM python:3.10.6-slim-buster AS base
 LABEL maintainer="Sean Conley <conleyst@gmail.com>"
 
 ENV FLASK_DEBUG=1
-ENV FLASK_APP=application
+ENV FLASK_APP=vansterdam.py
 ENV FLASK_RUN_HOST=0.0.0.0
 
-RUN apt-get update && apt-get install -y
+RUN apt-get update && apt-get install build-essential python-dev -y
 
 WORKDIR /vansterdam
 COPY . .
