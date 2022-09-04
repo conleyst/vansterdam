@@ -9,14 +9,16 @@ def index():
     user = {"name": "Sean"}
     adventures = [
         {"location": "Weesp", "description": "Eating cookies"},
-        {"location": "Durgerdam", "description": "Biking against the wind"}
+        {"location": "Durgerdam", "description": "Biking against the wind"},
     ]
 
-    return render_template("index.html", pagetitle="Homepage", user=user, adventures=adventures)
+    return render_template(
+        "index.html", pagetitle="Homepage", user=user, adventures=adventures
+    )
 
 
-@app.route('/login')
+@app.route("/login")
 def login():
     form = LoginForm()
-    
-    return render_template('login.html', title='Sign In', form=form)
+
+    return render_template("login.html", title="Sign In", form=form)
