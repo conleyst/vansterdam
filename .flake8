@@ -3,4 +3,4 @@ ignore = E128, E203, E402, E501, W503, N803, N806, F401
 per-file-ignores =
     gadgets/tests/conftest.py:F401,
     gadgets/tests/fixtures/dataset_fixtures.py:N802
-exclude = */__init__.py
+exclude = */__init__.py, migrations/*
