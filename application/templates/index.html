@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% block adventure %}
+{% block content %}
     <h1>Hi, {{ user.name }}!</h1>
     {% for adventure in adventures %}
     <p><b>{{ adventure.location }}</b><br><i>{{ adventure.description }}</i></p>
