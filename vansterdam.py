@@ -1,1 +1,1 @@
-from application import app
+from vansterdam import app

@@ -7,13 +7,14 @@ services:
       - "5000:5000"
     volumes:
       - .:/vansterdam
+    env_file:
+      - .env
     environment:
       - DB_HOST=vansterdam_db
       - DB_NAME=vansterdam
       - DB_USER=postgres
       - DB_PASS=password
       - DB_PORT=5432
-      - SECRET_KEY=dev-secret-key
     depends_on:
       - vansterdam-db
   vansterdam-db:
